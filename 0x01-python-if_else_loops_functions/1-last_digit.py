@@ -12,4 +12,4 @@ if number >= 0:
 
 else:
     last_di = abs(number) % 10
-    print(f"Last digit of{number} is -{last_di} and is less than 6 and not 0")
+    print(f"Last digit of {number} is -{last_di} and is less than 6 and not 0")
