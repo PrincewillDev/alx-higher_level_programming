@@ -5,8 +5,8 @@ if __name__ == "__main__":
     if argvLen == 1:
         print("0 arguments.")
     elif argvLen == 2:
-        print("{} argument:".format(argvLen - 1))
+        print("1 argument:")
     else:
         print("{} arguments:".format(argvLen - 1))
     for index in range(1, len(argv)):
-        print("{}:{}".format(index, argv[index]))
+        print("{}: {}".format(index, argv[index]))
