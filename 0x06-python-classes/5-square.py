@@ -108,11 +108,12 @@ class Square:
         """
 
         square = self.size
+        
+        if square == 0:
+            print()
+        else:
+            for r in range(square):
+                for c in range(square):
+                    print("#", end="")
+                print("\n")
 
-        for r in range(square):
-            for c in range(square):
-                print("#", end="")
-            print("\n")
-
-        if self.size == 0:
-            print("")
