@@ -112,8 +112,5 @@ class Square:
         if square == 0:
             print()
         else:
-            for r in range(square):
-                for c in range(square):
-                    print("#", end="")
-                print("\n")
-
+            for i in range(square):
+                print("#" * square)
