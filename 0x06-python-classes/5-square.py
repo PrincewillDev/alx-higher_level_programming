@@ -108,7 +108,7 @@ class Square:
         """
 
         square = self.size
-        
+
         if square == 0:
             print()
         else:
