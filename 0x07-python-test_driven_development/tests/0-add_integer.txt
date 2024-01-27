@@ -1,0 +1,61 @@
+========================================== Test File ==============================================
+
+######################### The possible outcome cases #######################
+
+#import module:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+#Case 1
+#Testing for sum of two int
+>>> add_integer(5, 3)
+8
+
+#Case 2
+#Testing for sum of a negative and positive value
+>>> add_integer(-2, 7)
+5
+
+#Case 3
+#Testing for two float values
+>>> add_integer(0.5, 3.5)
+4
+
+#Case 4
+#Testing for argument a + b which is 98 by default
+>>> add_integer(10)
+108
+
+#Case 5
+#Testing for two negative values 
+>>> add_integer(-3, -3)
+-6
+
+#Case 6
+#Testing for a as int and b as string value
+>>> add_integer(2, 'a')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+#Case 7
+#Testing for a as string and b as int value
+>>> add_integer('hello', 7)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+#Case 8
+#Testing for empty input
+>>> add_integer() # doctest: +ELLIPSIS
+Traceback (most recent call last):
+	...
+TypeError: ...
+
+#Case 9
+#Testing for None input
+>>> add_integer(None)
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+
