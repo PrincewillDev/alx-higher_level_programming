@@ -57,7 +57,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
 
         if value < 0:
-            raise TypeError("width must be >= 0")
+            raise ValueError("width must be >= 0")
 
         self._width = value
 
@@ -74,6 +74,6 @@ class Rectangle:
             raise TypeError("width must be an integer")
 
         if value < 0:
-            raise TypeError("width must be >= 0")
+            raise ValueError("width must be >= 0")
 
         self._height = value
