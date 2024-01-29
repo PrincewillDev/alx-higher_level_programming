@@ -41,13 +41,13 @@ class Rectangle:
         """ Initializes the width and height
         with optional size
         """
-        self._width = width
-        self._height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
         """ Getter property for width attribute"""
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -56,15 +56,15 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("width must be an integer")
 
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
 
-        self._width = value
+        self.__width = value
 
     @property
     def height(self):
         """ Getter property for height attribute"""
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -73,7 +73,7 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("height must be an integer")
 
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
 
-        self._height = value
+        self.__height = value
