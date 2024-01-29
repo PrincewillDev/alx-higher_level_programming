@@ -41,8 +41,8 @@ class Rectangle:
         """ Initializes the width and height
         with optional size
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
