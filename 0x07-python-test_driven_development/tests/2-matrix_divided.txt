@@ -1,0 +1,54 @@
+========================================== Test File ==============================================
+
+######################### The possible outcome cases #######################
+
+"""
+Test cases for the matrix_divided function.
+
+These test cases cover various scenarios to ensure the correct behavior of the function.
+"""
+#Import Module:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+#Case 1: Dividing each element in a module
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+#Case 2: Dividing each element in a module by 0
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+	...
+TypeError: division by zero
+
+#Case 3: Dividing each element in a module by string
+>>> print(matrix_divided(matrix, "hello"))
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
+
+#Case 4: Passing in the matrix as argument without dividing
+>>> print(matrix_divided(matrix))
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+#Case 5: Passing in a non-matrix argument to be divided
+>>> print(matrix_divided(12, 3))
+Traceback (most recent call last):
+  ...
+TypeError: 'int' object is not subscriptable
+
+#Case 6: Passing a None Value as Argument
+>>> print(matrix_divided(None))
+Traceback (most recent call last):
+  ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+#Case 7: Passing a None argument to be divided
+>>> print(matrix_divided(None, 2))
+Traceback (most recent call last):
+  ...
+TypeError: 'NoneType' object is not subscriptable
+

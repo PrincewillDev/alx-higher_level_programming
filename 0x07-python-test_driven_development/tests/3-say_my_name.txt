@@ -1,0 +1,95 @@
+========================================== Test File ==============================================
+
+######################### The possible outcome cases #######################
+
+"""
+Test cases for the say_my_name function.
+
+These test cases cover various scenarios to ensure the correct behavior of the function.
+"""
+#Importing the module
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+#Case 1: Expected case
+>>> say_my_name("John", "Yenn")
+My name is John Yenn
+
+#Case 2: Invalid lastname (Not defined)
+>>> say_my_name("John", Yenn)
+Traceback (most recent call last):
+  	...
+NameError: name 'Yenn' is not defined
+
+#Case 3: One name entry (first_name)
+>>> say_my_name("Mary")
+My name is Mary 
+
+#Case 5: Invalid lastname input of type(int)
+>>> say_my_name("Mary", 23)
+Traceback (most recent call last):
+  	...
+TypeError: last_name must be a string
+
+#Case 6: Invalid firstname of type(int)
+>>> say_my_name(17, "Dan")
+Traceback (most recent call last):
+  	...
+TypeError: first_name must be a string
+
+#Case 7: No input
+>>> say_my_name()
+Traceback (most recent call last):
+  	...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+#Case 8: Input None
+>>> say_my_name(None)
+Traceback (most recent call last):
+  	...
+TypeError: first_name must be a string
+
+#Case 9: Input type(int)
+>>> say_my_name(123)
+Traceback (most recent call last):
+	 ...
+TypeError: first_name must be a string
+
+#Case 10: Firstname defined in parenthesis
+>>> say_my_name(("ken"), "uriel")
+My name is ken uriel
+
+#Case 11: Boolean input as firstname
+>>> say_my_name(True, "uriel")
+Traceback (most recent call last):
+  	...
+TypeError: first_name must be a string
+
+#Case 12: Boolean input
+>>> say_my_name(False)
+Traceback (most recent call last):
+  	...
+TypeError: first_name must be a string
+
+#Case 13: Boolean input as lastname
+>>> say_my_name("Ken", False)
+Traceback (most recent call last):
+  	...
+TypeError: last_name must be a string
+
+#Case 14: Lastname as tuple
+>>> say_my_name("Ken", ()) # doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+  	...
+TypeError: last_name must be a string 
+
+#Case 15: Lastname as list
+>>> say_my_name("Ken", []) # doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+  	...
+TypeError: last_name must be a string 
+
+#Case 16: Lastname as dict
+>>> say_my_name("Ken", {}) # doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+  	...
+TypeError: last_name must be a string 

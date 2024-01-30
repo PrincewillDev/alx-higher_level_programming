@@ -6,8 +6,9 @@ Parameters: a, b
 Returns: int: The sum of a and b
 """
 
+
 def add_integer(a, b=98):
-    """ Adds two intgers 
+    """ Adds two intgers
         Returns: int: The sum of a and b
     """
     if not isinstance(a, (int, float)):
