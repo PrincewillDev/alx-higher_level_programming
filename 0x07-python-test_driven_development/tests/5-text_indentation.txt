@@ -1,0 +1,52 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+#Case 1: Docstring input
+>>> text_indentation("")
+
+#Case 2: Integer Input
+>>> text_indentation(23)
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
+#Case 3: None argument
+>>> text_indentation(None)
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
+#Case 4: empty list argument
+>>> text_indentation([])
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
+#Case 5: empty tuple argument
+>>> text_indentation(())
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
+#Case 6: empty dict argument
+>>> text_indentation({})
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
+#Case 7: list input with string
+>>> text_indentation(["Hello"])
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
+#Case 8: String input
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
+
+#Case 9: Float input
+>>> text_indentation(9.0)
+Traceback (most recent call last):
+  	...
+TypeError: text must be a string
+
