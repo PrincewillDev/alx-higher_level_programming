@@ -22,9 +22,8 @@ class TestforMaxInt(unittest.TestCase):
         self.assertEqual(result, 8)
 
     def test_for_negative_numbers(self):
-        test_list = [1,2,3,0,3]
-        for number in test_list:
-           self.assertGreaterEqual(number, 0)
+        test_list = [1,2,3,0,3,-1]
+        self.assertRaises(TypeError, max_integer, test_list)
 
     def test_for_one_item_in_list(self):
         result = max_integer(list=[3])
