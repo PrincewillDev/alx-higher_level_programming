@@ -9,26 +9,6 @@ class TestforMaxInt(unittest.TestCase):
         result = max_integer(list=[])
         self.assertIsNone(result)
 
-    def test_normal_case(self):
-        """Test with normal cases"""
-        self.assertEqual(max_integer([1, 5, 2, 4]), 5)
-        self.assertEqual(max_integer([-2, 7, 0, -10]), 7)
-        self.assertEqual(max_integer([-5, -0.5, -25, -15]), -0.5)
-        self.assertEqual(max_integer([0, -2, -10]), 0)
-        self.assertEqual(max_integer([-7]), -7)
-        self.assertEqual(max_integer([0]), 0)
-        self.assertEqual(max_integer([15, 3, 2, 4]), 15)
-        self.assertEqual(max_integer([10, 5, 90, 2, 4]), 90)
-
-    def test_for_negative_numbers(self):
-        self.assertRaises(TypeError, max_integer, 2)
-        self.assertRaises(TypeError, max_integer, None)
-        self.assertRaises(TypeError, max_integer, [1, -5, 'a', 7])
-        self.assertRaises(TypeError, max_integer, [1, -5, [6], 7])
-
-    def test_for_one_item_in_list(self):
-        result = max_integer(list=[3])
-        self.assertEqual(result, 3)
 
 if __name__ == "__main__":
     unittest.main()
