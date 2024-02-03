@@ -9,17 +9,14 @@ class TestforMaxInt(unittest.TestCase):
         result = max_integer(list=[])
         self.assertIsNone(result)
 
-    def test_for_correct_output(self):
-        result = max_integer(list=[1,2,3,4])
-        self.assertEqual(result, 4)
-	
-    def test_for_max_at_the_beginning(self):
-        result = max_integer(list=[10,2,3,4])
-        self.assertEqual(result, 10)
-	
-    def test_for_max_in_the_middle(self):
-        result = max_integer(list=[1,2,3,8,4,5,6])
-        self.assertEqual(result, 8)
+    def test_normal_case(self):
+        """Test with normal cases"""
+        self.assertEqual(max_integer([1, 5, 2, 4]), 5)
+        self.assertEqual(max_integer([-2, 7, 0, -10]), 7)
+        self.assertEqual(max_integer([-5, -0.5, -25, -15]), -0.5)
+        self.assertEqual(max_integer([0, -2, -10]), 0)
+        self.assertEqual(max_integer([-7]), -7)
+        self.assertEqual(max_integer([0]), 0)
 
     def test_for_negative_numbers(self):
         self.assertRaises(TypeError, max_integer, 2)
