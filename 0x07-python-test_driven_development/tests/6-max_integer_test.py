@@ -22,9 +22,14 @@ class TestforMaxInt(unittest.TestCase):
         self.assertEqual(result, 8)
 
     def test_for_negative_numbers(self):
-        test_list = [1,2,3,0,3,-1]
-        self.assertRaises(TypeError, max_integer, test_list)
+        self.assertRaises(TypeError, max_integer, 2)
+        self.assertRaises(TypeError, max_integer, None)
+        self.assertRaises(TypeError, max_integer, [1, -5, 'a', 7])
+        self.assertRaises(TypeError, max_integer, [1, -5, [6], 7])
 
     def test_for_one_item_in_list(self):
         result = max_integer(list=[3])
         self.assertEqual(result, 3)
+
+if __name__ == "__main__":
+    unittest.main()
