@@ -18,7 +18,7 @@ class TestforMaxInt(unittest.TestCase):
         self.assertEqual(max_integer([-7]), -7)
         self.assertEqual(max_integer([0]), 0)
         self.assertEqual(max_integer([15, 3, 2, 4]), 15)
-        self.assertEqual(max_integer([10, 5, 9, 2, 4]), 9)
+        self.assertEqual(max_integer([10, 5, 90, 2, 4]), 90)
 
     def test_for_negative_numbers(self):
         self.assertRaises(TypeError, max_integer, 2)
