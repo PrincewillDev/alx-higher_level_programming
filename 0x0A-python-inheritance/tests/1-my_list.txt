@@ -25,7 +25,7 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 [0.1, 9, 9.4, 12]
 
 #Test 6: testing a sorted empty list
->>> MyList([]).print_sorted()
+>>> MyList()
 []
 
 #Test 4: testing a non list
@@ -44,6 +44,6 @@ TypeError: list expected at most 1 argument, got 2
 >>> str(mylist)
 '[1, 2, 3]'
 
->>> mylist = MyList([])
+>>> mylist = MyList()
 >>> mylist.print_sorted()
 []
