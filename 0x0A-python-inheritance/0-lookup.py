@@ -20,7 +20,4 @@ def lookup(obj):
     Attributes and Methods of obj
 
     """
-    obj_list = []
-    obj_list.append(dir(obj))
-
-    return obj_list
+    return dir(obj)
