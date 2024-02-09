@@ -20,4 +20,4 @@ def read_file(filename=""):
         read_file = text_file.read()
 
     # Print its content to stdout
-    print(read_file)
+    print(read_file, end="")
