@@ -13,5 +13,14 @@ import json
 
 
 def from_json_string(my_str):
+    """
+    This function accepts a json format string and
+    deserialize it (convert it to python object)
+
+    Parameter:
+    my_str: Json format string
+
+    Return: python object
+    """
     py_obj = json.loads(my_str)
     return py_obj
