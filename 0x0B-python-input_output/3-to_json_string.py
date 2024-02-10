@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import json
-
 """
 This module creates a function <to_json_string(object)>
 that accepts a python object and
