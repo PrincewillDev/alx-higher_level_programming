@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
-import json
 """
 This module creates a function <to_json_string(object)>
 that accepts a python object and
 serialize it (convert it to json format)
+
+Functions:
+    to_json_string - Returns the JSON representation of an object.
 """
+import json
 
 
 def to_json_string(my_obj):
