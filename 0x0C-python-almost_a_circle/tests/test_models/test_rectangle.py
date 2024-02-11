@@ -9,14 +9,18 @@ import unittest
 import os
 from models.rectangle import Rectangle
 
+
 class TestRectangleClass(unittest.TestCase):
     """
     This Class test the Rectangle class while inheriting
     TestCase class from unittest module.
 
     Method:
-        test_if_module_is_present: This test checks if the module
-        <rectangle> exists.
+        test_if_module_is_present: This test checks if
+        the module <rectangle> exists.
+
+        test_rectangle_instance_attribute: This checks if the
+        attribute behaves as expected.
 
     """
     def test_if_module_is_present(self):

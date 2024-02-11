@@ -10,6 +10,7 @@ Class:
     Rectangle: This class represents rectangle
 """
 
+
 class Rectangle(Base):
     """
     This class represents a rectangle
@@ -43,9 +44,9 @@ class Rectangle(Base):
         y: This is a getter and setter property that returns
         the private instance attribute <__y> and also set it
     """
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__()
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -79,16 +80,6 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         self.__y = value
-
-
-
-
-
-
-
-
-
-
