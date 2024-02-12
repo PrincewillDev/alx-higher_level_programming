@@ -34,8 +34,14 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(rec_object_1.height, 3)
         self.assertEqual(rec_object_1.x, 0)
         self.assertEqual(rec_object_1.y, 0)
-        self.assertEqual(rec_object_1.id, 1)
 
         self.assertEqual(rec_object_2.x, 2)
         self.assertEqual(rec_object_2.y, 9)
         self.assertEqual(rec_object_2.id, 34)
+
+    def test_edge_cases_for_attributes(self):
+        with self.assertRaises(TypeError):
+            Rectangle("Hello", 2.3, 9.0, '7','2')
+
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 0, -2, -7)

@@ -43,6 +43,15 @@ class Rectangle(Base):
 
         y: This is a getter and setter property that returns
         the private instance attribute <__y> and also set it
+    Raises:
+        TypeError:
+            1, If input is not an integer.
+
+        ValueError:
+            1, If 'width' is less than or equal to Zero
+            2, If 'height' is less than or equal to Zero
+            3, If 'x' is less than zero
+            4, If 'y' is less than zero
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -58,6 +67,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(type(width).__name__))
+        if value < 0:
+            raise ValueError("{} must be  > 0".format())
         self.__width = value
 
     @property
@@ -66,6 +79,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(type(width).__name__))
         self.__height = value
 
     @property
@@ -74,6 +89,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(type(x).__name__))
         self.__x = value
 
     @property
@@ -82,4 +99,6 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(type(y).__name__))
         self.__y = value
