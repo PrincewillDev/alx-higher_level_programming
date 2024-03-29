@@ -1,5 +1,3 @@
 -- This script updates the score of Bob to 10 in second_table
 
-UPDATE second_table
-SET score = 10
-WHERE score = 14
+UPDATE second_table SET score = 10 WHERE score = 14
