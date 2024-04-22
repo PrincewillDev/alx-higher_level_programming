@@ -12,7 +12,7 @@
 ### 10-top_score.sql: This script lists all records of a table in a database
 ### 11-best_score.sql: This script all record with a score >= 10 in the table
 ### 12-no_cheating.sql: This script updates the score of Bob to 10 in second_table
-###--13-change_class.sql: This script removes all records with a score <= 5 second_table
-###--14-average.sql: This script score average of all records in the second_table
-###--15-groups.sql: This script lists the number of records with the same score in the second_table
-###--16-no_link.sql: This script lists all records of the second_table
+### 13-change_class.sql: This script removes all records with a score <= 5 second_table
+### 14-average.sql: This script score average of all records in the second_table
+### 15-groups.sql: This script lists the number of records with the same score in the second_table
+### 16-no_link.sql: This script lists all records of the second_table
