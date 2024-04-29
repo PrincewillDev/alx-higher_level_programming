@@ -1,7 +1,7 @@
 """
 This script interacts with the mysql database by listing all states
 """
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import sys
 import MySQLdb
