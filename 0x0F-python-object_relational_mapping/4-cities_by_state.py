@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script tscript that lists all cities from the database
+This script lists all cities from the database
 """
 
 if __name__ == "__main__":
