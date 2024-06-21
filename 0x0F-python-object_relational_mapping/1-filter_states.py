@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This script contains a function that lists all states from a database starting with learner N..
+This script contains a function that lists all states
+from a database starting with learner N..
 Note: database name is passed as argument to the script.
 """
 # Ensuring code cant execute when imported
 if __name__ == "__main__":
-
-# Import the modules
+    # Import the modules
     import sys
     import MySQLdb
 
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     dbname = sys.argv[3]
 
-# Connect to database
+    # Connect to database
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -24,7 +24,7 @@ if __name__ == "__main__":
         db=dbname
     )
 
-# Create Cursor
+    # Create Cursor
     cursor = db.cursor()
 
     # Fetch data from database
@@ -35,6 +35,6 @@ if __name__ == "__main__":
     for r in rows:
         print(r)
 
-# Close cursor and connection 
+    # Close cursor and connection
     cursor.close()
     db.close()
