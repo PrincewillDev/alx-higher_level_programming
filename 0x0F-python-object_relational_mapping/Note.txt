@@ -1,0 +1,15 @@
+Here are the comments extracted from the script:
+"""
+This script contains a function that lists all states from a database starting with learner N.
+Note: database name is passed as argument to the script.
+"""
+Ensuring code cant execute when imported
+Import the modules
+Assigning the arguments with their index
+Connect to database 
+Create Query
+Create Cursor
+Use cursor to execute query
+Fetch all result
+Use a for loop to print out the result
+Close cursor and connection
