@@ -34,7 +34,7 @@ session = Session()
 try:
     # Create query
     data = session.query(State).filter(State.name.like('%a%'))\
-    .order_by(asc(State.id)).all()
+        .order_by(asc(State.id)).all()
 
     for item in data:
         print(f"{item.id}: {item.name}")
