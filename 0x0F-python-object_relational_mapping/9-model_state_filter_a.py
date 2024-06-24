@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-This script prints the first State object from the database hbtn_0e_6_usa
+This script  lists all State objects that contain the letter a
+from the database hbtn_0e_6_usa
 using sqlalchemy
 """
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
 import sys
 from model_state import Base, State
@@ -32,14 +33,11 @@ session = Session()
 
 try:
     # Create query
-    data = session.query(State).order_by(State.id).first()
+    data = session.query(State).filter(State.name.like('%a%'))\
+    .order_by(asc(State.id)).all()
 
-    if data:
-        print(f"{data.id}: {data.name}")
-
-    else:
-        print("Nothing")
-
+    for item in data:
+        print(f"{item.id}: {item.name}")
 
 finally:
     # Close the session
