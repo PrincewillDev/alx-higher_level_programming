@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script that adds the State object “Louisiana”
-to the database hbtn_0e_6_usa
+This script changes the name of a State object
+from the database hbtn_0e_6_usa
 using sqlalchemy
 """
 
@@ -33,11 +33,9 @@ session = Session()
 
 try:
     # Use the session to query the database
-    newState = State(name="Louisiana")
-    session.add(newState)
+    row = session.query(State).filter(State.id == 2)\
+        .update({"name": "New Mexico"}, synchronize_session=False)
     session.commit()
-
-    print(newState.id)
 
 finally:
     # Close the session
