@@ -14,8 +14,10 @@ Functions:
 from sqlalchemy import Integer, String, Column, ForeignKey
 from model_state import Base, State
 
+
 # Define our City model
 class City(Base):
+
     """Links to the states table of a MySQL database.
     """
     __tablename__ = 'cities'
