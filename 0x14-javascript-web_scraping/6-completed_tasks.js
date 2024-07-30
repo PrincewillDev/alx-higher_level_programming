@@ -1,4 +1,3 @@
-
 #!/usr/bin/node
 
 // This script computes the number of tasks completed by user id.
