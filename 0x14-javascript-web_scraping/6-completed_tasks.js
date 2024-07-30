@@ -23,4 +23,3 @@ request(url, function (error, response, body) {
   }
   console.log(completedTasks);
 });
-
